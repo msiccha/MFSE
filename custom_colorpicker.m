@@ -9,6 +9,8 @@ function varargout = custom_colorpicker(varargin)
 %      custom_colorpicker('CALLBACK',hObject,eventData,handles,...) calls the local
 %      function named CALLBACK in custom_colorpicker.M with the given input arguments.
 %
+%      Test change
+%
 %      custom_colorpicker('Property','Value',...) creates a new custom_colorpicker or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
 %      applied to the GUI before custom_colorpicker_OpeningFcn gets called.  An
