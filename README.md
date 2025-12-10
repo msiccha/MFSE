@@ -53,7 +53,7 @@ Label operations are generally irreversible
 
 [Hotkeys](#_Toc216261986)
 
-[Project Creation Tool](#_Toc216261987)
+[Project Creation Tool](#Project Creation Tool)
 
 # Glossary
 
