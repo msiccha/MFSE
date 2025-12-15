@@ -4,6 +4,8 @@ MicroFossil Segmentation Editor Manual
 
 X-ray micro computer tomography (x-ray µCT) allows the quantification of morphological features of microfossils in an unprecedented level of detail and completeness. This software toolbox is designed to assist researchers in the extraction of morphological data out of the µCT scan data accurately and reproducibly and allows the comprehensive manipulation of microfossil (in particular foraminifera) segmentation data.
 
+![The San Juan Mountains are beautiful](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+
 # General notes
 
 - The basic shell segmentation cannot be edited with MFSE.
@@ -14,45 +16,45 @@ X-ray micro computer tomography (x-ray µCT) allows the quantification of morpho
 
 [Toolbar Menu](#toolbar-menu)
 
-[File](#_file)
+[File](#file)
 
-[Import](#_import)
+[Import](#import)
 
-[Macros](#_macros)
+[Macros](#macros)
 
-[Export](#_export)
+[Export](#export)
 
-[Preferences](#_preferences)
+[Preferences](#preferences)
 
-[Help](#_help)
+[Help](#help)
 
-[GUI](#_Toc216706868)
+[GUI](#gui)
 
-[Segmentation project information panel](#_Toc216706869)
+[Segmentation project information panel](#segmentation-project-information-panel)
 
-[View and select panel](#_Toc216706870)
+[View and select panel](#view-and-select-panel)
 
-[Camera controls](#_Toc216706871)
+[Camera controls](#camera-controls)
 
-[3D environment visualization panel](#_Toc216706872)
+[3D environment visualization panel](#3D-environment-visualization-panel)
 
-[Basic shell segmentation panel](#_Toc216706873)
+[Basic shell segmentation panel](#Basic-shell-segmentation-panel)
 
-[General label operations panel](#_Toc216706874)
+[General label operations panel](#General-label-operations-panel)
 
-[Lumen label operations panel](#_Toc216706875)
+[Lumen label operations panel](#Lumen-label-operations-panel)
 
-[Shell label operations panel](#_Toc216706876)
+[Shell label operations panel](#Shell-label-operations-panel)
 
-[Label data panel](#_Toc216706877)
+[Label data panel](#Label-data-panel)
 
-[Hotkeys](#_Toc216706878)
+[Hotkeys](#Hotkeys)
 
-[Project Creation Tool](#_Toc216706879)
+[Project Creation Tool](#Project-Creation-Tool)
 
-[References](#_Toc216706880)
+[References](#References)
 
-[Glossary](#_Toc216706881)
+[Glossary](#Glossary)
 
 # Toolbar Menu
 
