@@ -12,7 +12,7 @@ X-ray micro computer tomography (x-ray µCT) allows the quantification of morpho
 
 # Table of contents
 
-[Toolbar Menu](#-toolbar-menu)
+[Toolbar Menu](#toolbar-menu)
 
 [File](#_file)
 
