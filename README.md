@@ -4,7 +4,7 @@ MicroFossil Segmentation Editor Manual
 
 X-ray micro computer tomography (x-ray µCT) allows the quantification of morphological features of microfossils in an unprecedented level of detail and completeness. This software toolbox is designed to assist researchers in the extraction of morphological data out of the µCT scan data accurately and reproducibly and allows the comprehensive manipulation of microfossil (in particular foraminifera) segmentation data.
 
-![The San Juan Mountains are beautiful](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+![MFSE GUI](/Screenshot-MFSE-GUI.jpg "MFSE GUI")
 
 # General notes
 
