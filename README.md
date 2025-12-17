@@ -90,7 +90,7 @@ This macro assigns any shell voxels not yet labeled to a set of new labels accor
 
 #### Recalculate all label properties
 
-This macro recalculates all the label properties (Volume, Solidity etc.).
+This macro recalculates all the label properties (Volume, Solidity, etc.).
 
 ## Export
 
@@ -112,7 +112,7 @@ All options for the use of a parallel pool. Parallel computing is used as standa
 
 #### Lighting
 
-This panel contains all lighting option. After changes have been made all patch will need to be regenerated.
+This panel contains all lighting options. After changes have been made all patches will need to be regenerated.
 
 #### Label operation defaults
 
@@ -208,11 +208,11 @@ After selecting a single label this allows you to selectively show only labels t
 
 #### Label filter
 
-The following elements allow you to customize which labels are visualized in the _Visualization panel_ through various filter and display options:
+The following elements allow you to customize which labels are visualized in the _Visualization panel_ through various filter and display options_:_
 
 #### Show
 
-Shows all labels (i.e. adds labels to the Visualization panel) that match the selected _Label filter_s.
+Shows all labels (i.e. adds labels to the Visualization panel) that match the selected Label filters.
 
 #### Hide
 
@@ -220,27 +220,27 @@ Hides all labels that match the selected Label filter_s_**_._**
 
 #### .. only
 
-Can be used in combination with _Show_ to only display labels matching the _Label filter_s.
+Can be used in combination with _Show_ to only display labels matching the Label filters.
 
 #### .. active
 
-Can be used in combination with _Show_ and .. only .. to display active labels matching the _Label filter_s.
+Can be used in combination with _Show_ and .. only .. to display active labels matching the Label filters.
 
 #### MU
 
-Morphounit filter parameters - the first dropdown-list to the right allows you to select less than or equal to (&lt;=), greater than or equal to (&gt;=), equal to (==), or not equal to (!=) labels according to the morphounit number in the second dropdown-list to the right.
+Morphounit filter parameters - the first of two dropdown-lists to the right of the text allows you to select less than or equal to (&lt;=), greater than or equal to (&gt;=), equal to (==), or not equal to (!=) labels according to the morphounit number in the second dropdown-list.
 
 #### Layer
 
-Layer filter parameters - the first dropdown-list to the right to the right allows you to select less than or equal to (&lt;=), greater than or equal to (&gt;=), equal to (==), or not equal to (!=) labels according to Layer number in the second dropdown-list to the right.
+Layer filter parameters - the first of two dropdown-lists to the right of the text allows you to select less than or equal to (&lt;=), greater than or equal to (&gt;=), equal to (==), or not equal to (!=) labels according to Layer number in the second dropdown-list.
 
 #### Class
 
-Class filter parameters - the first dropdown-list to the right allows you to select equal to (==), or not equal to (!=) labels according to Class type in the second dropdown-list to the right.
+Class filter parameters - the first of two dropdown-lists to the right of the text allows you to select equal to (==), or not equal to (!=) labels according to Class type in the second dropdown-list.
 
 #### Group
 
-Group filter parameters - the first dropdown-list allows you to select equal to (==), or not equal to (!=) labels according to Group type in the second dropdown-list to the right.
+Group filter parameters - the first of two dropdown-lists to the right of the text allows you to select equal to (==), or not equal to (!=) labels according to Group type in the second dropdown-list.
 
 ## Camera controls
 
@@ -312,8 +312,9 @@ Splits the selected singular label into a number of desired subvolumes in form o
 
 #### Singularize
 
-Removes all but the largest patch of non-singular labels. To execute this operation, one or multiple labels need to be selected but each label must consist of multiple patches.  
-**WARNING** The removed patches are deleted.
+Removes all but the largest patch of non-singular labels. To execute this operation, one or multiple labels need to be selected but each label must consist of multiple patches.
+
+WARNING The removed patches are deleted.
 
 #### Separate patches
 
@@ -323,7 +324,7 @@ Separates patches based on their individual volumes or solidity. A dialog opens 
 
 Moves the selected label(s) to a different layer. A dialog opens and asks for the destination layer. Label voxels in the destination layer will be overwritten by the moved labels. To execute this operation, one or multiple labels need to be selected.
 
-**WARNING** Voxels in the target layer are overwritten without checking whether they already belong to another label.
+WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 Copy
 
@@ -349,19 +350,19 @@ Merges exactly two selected labels into one. The labels do not need to be connec
 
 #### Split
 
-Splits the selected label into a number of desired subvolumes in form of new labels in a non-volume constant operation, that is voxels are lost. A dialog opens that asks for the number of desired subvolumes. When this label operation is applied, MFSE will automatically append "split patch NX" to the name of the newly generated labels, where X represents a consecutive numbering. To execute this operation, one label needs to be selected which consists of only one patch.
+Splits the selected label into a number of desired subvolumes in form of new labels in a non-volume constant operation (i. e. voxels are lost). A dialog opens that asks for the number of desired subvolumes. When this label operation is applied, MFSE will automatically append "split patch NX" to the name of the newly generated labels, where X represents a consecutive numbering. To execute this operation, one label needs to be selected which consists of only one patch.
 
 #### Subtract
 
 Subtracts one label from another to generate a new label. A dialogue window will open that asks for the name of the new label, the destination layer and which of selected the labels are to be used as minuend and subtrahend. To execute this operation, exactly two labels need to be selected.
 
-**WARNING** Voxels in the target layer are overwritten without checking whether they already belong to another label.
+WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 #### Intersect
 
 Creates a new label from the overlapping voxels of two selected labels. A dialogue window will open that asks for the name of the new label and the target layer. To execute this operation, two labels need to be selected.
 
-**WARNING** Voxels in the target layer are overwritten without checking whether they already belong to another label.
+WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 #### Remove appendages
 
@@ -373,7 +374,7 @@ This panel includes all the available operations for the editing process of lume
 
 #### Delimit in situ
 
-Delimit the extent of the selected label by finding a threshold value in the ambient occlusion data that maximizes the volume to surface ratio, which is roughly equivalent to finding the most compact shape. The voxels of the basic shell segmentation will be considered in the calculation of the ambient occlusion field. If present, the imported ambient occlusion field will be used. A dialog opens that asks you for the name of the new label and the margin width and number of rays to use for the calculation of the ambient occlusion field. A higher number of rays and larger size of the ambient occlusion field will usually yield more aesthetically pleasing results but also require longer computation time. Note that with a too small field size, "shading" elements of the segmentation data might not be included in the calculation. In some cases, it might be necessary to expand the lumen label in question in order to achieve a certain gradient of values in the calculated ambient occlusion for a satisfying delimitation, the expansion factor serves this purpose. If you think that voxels of another lumen label should be included in the delimitation procedure of this particular label, you can enumerate them in the _additional labels to be considered_ field of the dialogue. Finally, you need to specify the target layer for the operation. When this label operation is applied, MFSE will automatically append "externa" to the newly generated label consisting of the voxels not belonging to the most compact shape of the original label. To execute this operation, one label with the _Class_ Lumen needs to be selected. If the operation cannot be completed with the message "No gradient in the ambient occlusion data found" try expanding the label via the expansion factor.
+Delimit the extent of the selected label by finding a threshold value in the ambient occlusion data that maximizes the volume to surface ratio, which is roughly equivalent to finding the most compact shape. The voxels of the basic shell segmentation will be considered in the calculation of the ambient occlusion field. If present, the imported ambient occlusion field will be used. A dialog opens that asks you for the name of the new label and the margin width and number of rays to use for the calculation of the ambient occlusion field. A higher number of rays and larger size of the ambient occlusion field will usually yield more aesthetically pleasing results but also require longer computation time. Note that with a too small field size, "shading" elements of the segmentation data might not be included in the calculation. In some cases, it might be necessary to expand the lumen label in question in order to achieve a certain gradient of values in the calculated ambient occlusion for a satisfying delimitation, the expansion factor serves this purpose. If you think that voxels of another lumen label should be included in the delimitation procedure of this particular label, you can enumerate them in the _additional labels to be considered_ field of the dialogue. Finally, you need to specify the target layer for the operation. When this label operation is applied, MFSE will automatically append "externa" to the newly generated label consisting of the voxels not belonging to the most compact shape of the original label. To execute this operation, one label with the _Class_ Lumen needs to be selected. If the operation cannot be completed with the message "No gradient in the ambient occlusion data found", try expanding the label via the expansion factor.
 
 For a more detailed explanation, please have a look into:
 
@@ -381,7 +382,7 @@ PLACEHOLDER Main publication
 
 #### Delimit concave in vivo
 
-This operation works exactly as the _Delimit in situ_ operation but considers only the primary shell up to the morphounit of the selected lumen label, that is treating the data as if the morphounit of the selected lumen is the ultimate morphounit A dialog opens that asks you for a name of the new label, the margin width and number of rays to use for the calculation of the ambient occlusion field, the expansion factor for the volume, the shell and lumen layer to consider, the target layer optionally which morphounits to consider exclusively and which label to add the separated voxels to. To execute this operation, one label needs to be selected with Class set to Lumen; all lumina present in the data set must have a morphounit assigned belonging to a continuous sequence.
+This operation works exactly as the _Delimit in situ_ operation but considers only the primary shell up to the morphounit of the selected lumen label, that is treating the data as if the morphounit of the selected lumen is the ultimate morphounit. A dialog opens that asks you for a name of the new label, the margin width and number of rays to use for the calculation of the ambient occlusion field, the expansion factor for the volume, the shell and lumen layer to consider, the target layer, optionally which morphounits to consider exclusively and which label to add the separated voxels to. To execute this operation, one label needs to be selected with Class set to Lumen; all lumina present in the data set must have a morphounit assigned belonging to a continuous sequence.
 
 For a more detailed explanation, please have a look into:
 
@@ -405,7 +406,7 @@ This panel includes all the available operations for the editing process of shel
 
 #### Delimit convex individual
 
-This operation creates a hypothetical chamber lumen label based on the dimensions of the selected primary shell label. The newly generated lumen label is the convex hull of the shell label minus the shell label. Optionally a morphological opening function can be applied to the result. This operation is intended as an alternative to the Delimit in vivo operation measure for the determination of chamber lumen voluminal. A dialog opens that asks you to enter the name of the new label, the reduction element radius used in the morphological opening operation, whether you want to remove the lower growth stage lumina, the lumen layer to consider for the removal of the lower growth stage lumina, and the target layer of the operation. To execute this operation, one label needs to be selected. Each label needs to have an assigned MU and Class set to _Shell_.
+This operation creates a hypothetical chamber lumen label based on the dimensions of the selected primary shell label. The newly generated lumen label is the convex hull of the shell label minus the shell label. Optionally a morphological opening function can be applied to the result. This operation is intended as an alternative to the _Delimit in vivo_ operation measure for the determination of chamber lumen volumina. A dialog opens that asks you to enter the name of the new label, the reduction element radius used in the morphological opening operation, whether you want to remove the lower growth stage lumina, the lumen layer to consider for the removal of the lower growth stage lumina, and the target layer of the operation. To execute this operation, one label needs to be selected. Each label needs to have an assigned MU and Class set to _Shell_.
 
 For a more detailed explanation, please have a look into:
 
@@ -415,7 +416,7 @@ PLACEHOLDER Main publication
 
 #### Relabel
 
-This tool will renumber every label in the project according the current order in the Label data table. This also assigns new colors to each label.
+This tool will renumber every label in the project according to the current order in the Label data table. This also assigns new colors to each label.
 
 #### Recolor
 
@@ -463,7 +464,7 @@ The second hierarchical level of label description. The user is free to use any 
 **Type** - (manually editable)  
 The third hierarchical level of label description. The user is free to use any categorization.
 
-**Visu**(alization) (list choice)  
+**Visu**(alization) - (list choice)  
 This dropdown-list allows you to change the visualization of individual labels. There are three options: normal, smoothed and voxels. Please note that the voxelized visualization requires significantly more performance from your PC, so it should be employed sparingly.
 
 **Patches \[N\]**  
@@ -501,7 +502,7 @@ Toggles the View/Select button state
 
 # Project Creation Tool
 
-The Project Creation tool allows you create the projects files required for MFSE. It is organized into three are 3 main panels on the right side.
+The Project Creation tool allows you create the project files required for MFSE. It is organized into three main panels on the right side.
 
 PREVIEW Segmentation project information panel
 
@@ -513,27 +514,27 @@ The dropdown-list allows you to select which data is displayed in the main GUI r
 
 Project data panel
 
-This panel displays what project data present and allows you to add data and information to the project. Each of the four input requirements is accompanied by a checkbox starting in red. Upon entering information or data the checkbox will either automatically confirm a correct data input and turn green or will need the user's validation before the data is added. The mandatory inputs can be completed in any order but the following order is suggested.
+This panel displays what project data is present and allows you to add data and information to the project. Each of the four input requirements is accompanied by a checkbox starting in red. Upon entering information or data, the checkbox will either automatically confirm a correct data input and turn green or will need the user's validation before the data is added. The mandatory inputs can be completed in any order but the following order is suggested.
 
 The Mandatory input consist of the four following items:
 
-**Project information** - The project information consists of the three dimensions in voxels and the cubic resolution in micrometer of the dataset. This information can be entered or modified manually via _Enter_ or is extracted automatically from a GIPL file or RAW data file. In case a RAW data file the information is extracted from the file name. Upon entering or loading this data, the according fields in the _PREVIEW Segmentation project panel_ will be filled and the check box next to project information will turn green. A project name will be suggested based on the name of the loaded file.
+**Project information** - The project information consists of the three dimensions in voxels and the cubic resolution in micrometer of the dataset. This information can be entered or modified manually via _Enter_ or is extracted automatically from a GIPL file or RAW data file. In case a RAW data file the information is extracted from the file name. The file name needs to follow the naming pattern in Siccha et al. (2023). Upon entering or loading this data, the according fields in the _PREVIEW Segmentation project panel_ will be filled and the check box next to project information will turn green. A project name will be suggested based on the name of the loaded file.
 
 **Project name** - In this section, you can enter or modify the name of the project.
 
-**Shell segmentation** -The basic and underlying shell segmentation can be loaded from a GIPL or RAW file. In case of a RAW file several dialogues will open and ask for the data format specification such data type and byte order. After loading the shell segmentation data will be visible in the main part of the GUI and become available in the data dropdown-list of the _Display_ panel. You can scroll through the Z-axis of the data via the slider in the center of the GUI or by using the mouse wheel. This data needs to be validated manually, using the _Validate_ button, to proceed with the Project creation. If you find that the shell segmentation is unsatisfactory, please continue processing your shell segmentation in the software of your choice.
+**Shell segmentation** -The basic and underlying shell segmentation can be loaded from a GIPL or RAW file. In case of a RAW file several dialogues will open and ask for the data format specification such as data type and byte order. After loading the shell segmentation data will be visible in the main part of the GUI and become available in the data dropdown-list of the _Display_ panel. You can scroll through the Z-axis of the data via the slider in the center of the GUI or by using the mouse wheel. This data needs to be validated manually, using the _Validate_ button, to proceed with the Project creation. If you find that the shell segmentation is unsatisfactory, please continue processing your shell segmentation in the software of your choice.
 
 **Lumen labels** - Lastly, Lumen labels are required. For this, you can either use a previous output (e.g. from Amira) and input a GIPL or RAW file, if available, or MFSE will be able to create your own chamber segmentation, using a distance map. This data will also be previewed in the left panel and will have to be validated.
 
 The Optional input includes:
 
-Label description (currently unavailable)
+Label description currently unavailable
 
 This gives you the opportunity to import a pre-made label description (e.g. from an ITK-Snap TXT file).
 
 Lastly, two pushbuttons perform:
 
-**Clear project**
+Clear project
 
 This action will clear all project information and data without asking for confirmation.
 
@@ -546,40 +547,34 @@ When all mandatory project information is correctly entered and validated, you w
 The MFSE project includes functions or source code derived from
 
 Altman, Y (2019) FindJObj V1.53
-
 (<https://undocumentedmatlab.com/articles/findjobj-find-underlying-java-object>)
 
 Kroon, D-J (2007). GIPL Toolbox V1.0
-
 (<https://www.mathworks.com/matlabcentral/fileexchange/16407-gipl-toolbox>), MATLAB Central File Exchange. Retrieved September 26, 2023.
 
 Schalk, S. (2011) Voxel Image
-
 (<https://www.mathworks.com/matlabcentral/fileexchange/30374-voxel-image>), MATLAB Central File Exchange. Retrieved September 26, 2023.
 
 Legland, D. (2025) MatGeom: A toolbox for geometry processing with MATLAB.
-
 SoftwareX, 29, 101984, DOI:10.1016/j.softx.2024.101984b
 
 Muir, D. (2025). PARFOR progress monitor (progress bar) v3
-
 (<https://github.com/DylanMuir/ParforProgMon>), GitHub. Retrieved 24. November 2025.
 
 Hoelzer, S. (2025). Progressbar
-
 (<https://de.mathworks.com/matlabcentral/fileexchange/6922-progressbar>), MATLAB Central File Exchange. Retrieved 24. November 2025.
 
 Koblick, D. (2025) rotVecAroundArbAxis
-
 (<https://de.mathworks.com/matlabcentral/fileexchange/49916-rotvecaroundarbaxis-unitvec2rotate-rotationaxisunitvec-theta>), MATLAB Central File Exchange. Retrieved 9. Dezember 2025.
 
 Axis Maps / Woodruff, A. (2004), colorbrewer
-
 GitHub repository, <https://github.com/axismaps/colorbrewer/?tab=Apache-2.0-1-ov-file>
+
+Siccha, M., Morard, R., Meilland, J. et al. Collection of X-ray micro computed tomography images of shells of planktic foraminifera with curated taxonomy. Sci Data 10, 679 (2023). <https://doi.org/10.1038/s41597-023-02498-0>
 
 # Glossary
 
-Voxel - is a three-dimensional equivalent to a pixel. It represents the value for a (in our case always cubic) regularly sized and spaced portion of a data volume. For the purpose of volume segmentation in MFSE each voxel in each layer either belongs to a label (is set) or represents empty space in your volume (is not set).
+Voxel - is a three-dimensional equivalent to a pixel. It represents the value for a (in our case always cubic) regularly sized and spaced portion of a data volume. For the purpose of volume segmentation in MFSE, each voxel in each layer either belongs to a label (is set) or represents empty space in your volume (is not set).
 
 Layer - is a three-dimensional volume in which the voxels of your segmentation project data exist. A project can contain several layers; currently the maximum number of layers is set to four.
 
@@ -598,3 +593,4 @@ Lumen (class)- is (in regard to this software) the volume inside of a microfossi
 Shell (class)- is (in regard to this software) the volume of a microfossil shell or subsection (chamber) thereof. The voxels belonging to a label classified as shell are permitted to coexist with the voxels set in the basic shell segmentation.
 
 Externa (class)- is (in regard to this software) a volume inside or outside of a microfossil shell or subsection (chamber) thereof. The voxels belonging to a label classified as externa are not permitted to coexist with voxel set in the basic shell segmentation. Externa are generated in several label operations and are often designated to be excluded from the final segmentation.
+
