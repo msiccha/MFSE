@@ -314,7 +314,7 @@ Splits the selected singular label into a number of desired subvolumes in form o
 
 Removes all but the largest patch of non-singular labels. To execute this operation, one or multiple labels need to be selected but each label must consist of multiple patches.
 
-WARNING The removed patches are deleted.
+<ins>WARNING</ins> The removed patches are deleted.
 
 #### Separate patches
 
@@ -324,13 +324,13 @@ Separates patches based on their individual volumes or solidity. A dialog opens 
 
 Moves the selected label(s) to a different layer. A dialog opens and asks for the destination layer. Label voxels in the destination layer will be overwritten by the moved labels. To execute this operation, one or multiple labels need to be selected.
 
-WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
+<ins>WARNING</ins> Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 Copy
 
 Copies the selected label(s) to a different layer. A dialog opens and asks for the name of the new label and the destination layer. Label voxels in the destination layer will be overwritten by the moved labels. To execute this operation, one or multiple labels need to be selected.
 
-WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
+<ins>WARNING</ins> Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 #### Recolor
 
@@ -356,13 +356,13 @@ Splits the selected label into a number of desired subvolumes in form of new lab
 
 Subtracts one label from another to generate a new label. A dialogue window will open that asks for the name of the new label, the destination layer and which of selected the labels are to be used as minuend and subtrahend. To execute this operation, exactly two labels need to be selected.
 
-WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
+<ins>WARNING</ins> Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 #### Intersect
 
 Creates a new label from the overlapping voxels of two selected labels. A dialogue window will open that asks for the name of the new label and the target layer. To execute this operation, two labels need to be selected.
 
-WARNING Voxels in the target layer are overwritten without checking whether they already belong to another label.
+<ins>WARNING</ins> Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
 #### Remove appendages
 
@@ -504,15 +504,15 @@ Toggles the View/Select button state
 
 The Project Creation tool allows you create the project files required for MFSE. It is organized into three main panels on the right side.
 
-PREVIEW Segmentation project information panel
+**PREVIEW Segmentation project information panel**
 
 This panel displays the basic project information identical as displayed in MFSE. It is completed step by step during the project creation. The only manually editable field in this panel is the _Comment_ field.
 
-Display panel
+**Display panel**
 
 The dropdown-list allows you to select which data is displayed in the main GUI region.
 
-Project data panel
+**Project data panel**
 
 This panel displays what project data is present and allows you to add data and information to the project. Each of the four input requirements is accompanied by a checkbox starting in red. Upon entering information or data, the checkbox will either automatically confirm a correct data input and turn green or will need the user's validation before the data is added. The mandatory inputs can be completed in any order but the following order is suggested.
 
@@ -528,13 +528,13 @@ The Mandatory input consist of the four following items:
 
 The Optional input includes:
 
-Label description currently unavailable
+**Label description** currently unavailable
 
 This gives you the opportunity to import a pre-made label description (e.g. from an ITK-Snap TXT file).
 
 Lastly, two pushbuttons perform:
 
-Clear project
+**Clear project**
 
 This action will clear all project information and data without asking for confirmation.
 
