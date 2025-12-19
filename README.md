@@ -18,10 +18,10 @@ If you use this software toolbox for your research, please cite the following ar
 
 # Troubleshooting
 
-The GUI is not displayed correctly (elements missing or cut off)  
+- The GUI is not displayed correctly (elements missing or cut off)  
 Set the windows display scale to 100% (go to Display settings / Scale & layout / Scale). If this does not resolve the issue, try enforcing a 1920 × 1080 pixels display resolution.
 
-Rotation does not work properly with the touchpad  
+- Rotation does not work properly with the touchpad  
 A known but unresolved issue with some types of notebook touchpads. Use a standard mouse connected via USB instead.
 
 # Table of contents
@@ -73,6 +73,18 @@ A known but unresolved issue with some types of notebook touchpads. Use a standa
 # Workflow
 
 ![MFSE Workflow](https://github.com/msiccha/MFSE/blob/6ce4a13ff8a41d02937809b88bdb10d7621e4bd4/Workflow.png "MFSE Workflow")
+
+The typical complete workflow consists of seven steps (see above diagram).
+
+- Project generation \[import or generation of chamber lumen labels\]
+- Editing existing chamber lumen labels
+- Classification of the chamber lumen labels
+- Tracing of the primary chamber walls
+- Editing of the primary chamber walls
+- Delimitation of the in-vivo chamber lumina
+- Finalization of the individual chamber walls
+
+A few short video tutorials, about the GUI, general project creation and the overall recommended segmentation procedure are available in a YouTube channel (@MFSE-tutorials-123), the CT scan data and shell segmentation of a planktic foraminifera of the species _Globigerinita glutinata_, is provided along the installation files.
 
 # Toolbar Menu
 
