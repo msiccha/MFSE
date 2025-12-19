@@ -4145,6 +4145,3 @@ global system
 system.temp.settingsGUI_active=false;
 handles.Preferences.Enable='on';
 delete(handlesSecondary.MFSE_Settings)
-
-
-
