@@ -4,6 +4,10 @@ MicroFossil Segmentation Editor Manual
 
 X-ray micro computer tomography (x-ray µCT) allows the quantification of morphological features of microfossils in an unprecedented level of detail and completeness. This software toolbox is designed to assist researchers in the extraction of morphological data out of the µCT scan data accurately and reproducibly and allows the comprehensive manipulation of microfossil (in particular foraminifera) segmentation data.
 
+If you use this software toolbox for your research, please cite the following article:
+
+- PLACEHOLDER JORS software metapaper
+
 ![MFSE GUI](https://github.com/msiccha/MFSE/blob/cc6e33f570e2673c38a0601dbe2e91395b86113e/MFSE-GUI-Screenshot.png "MFSE GUI")
 
 # General notes
@@ -12,7 +16,17 @@ X-ray micro computer tomography (x-ray µCT) allows the quantification of morpho
 - A label patch consisting of only a few voxels might not be rendered in the normal or smoothed visualization. Change the visualization to voxels to make the label patch visible.
 - Label operations are generally irreversible.
 
+# Troubleshooting
+
+The GUI is not displayed correctly (elements missing or cut off)  
+Set the windows display scale to 100% (go to Display settings / Scale & layout / Scale). If this does not resolve the issue, try enforcing a 1920 × 1080 pixels display resolution.
+
+Rotation does not work properly with the touchpad  
+A known but unresolved issue with some types of notebook touchpads. Use a standard mouse connected via USB instead.
+
 # Table of contents
+
+[Workflow](#workflow)
 
 [Toolbar Menu](#toolbar-menu)
 
@@ -55,6 +69,10 @@ X-ray micro computer tomography (x-ray µCT) allows the quantification of morpho
 [References](#References)
 
 [Glossary](#Glossary)
+
+# Workflow
+
+![MFSE Workflow](https://github.com/msiccha/MFSE/blob/6ce4a13ff8a41d02937809b88bdb10d7621e4bd4/Workflow.png "MFSE Workflow")
 
 # Toolbar Menu
 
@@ -388,7 +406,7 @@ For a more detailed explanation, please have a look into:
 
 PLACEHOLDER Main publication
 
-#### Trace chamber wall
+#### Trace primary chamber wall
 
 This operation traces the primary chamber wall of the selected lumen label(s). It is an operation particular to the shell of foraminifera and generates a new label that represents the primary chamber wall of the selected lumen label. The primary chamber wall is the hypothesized chamber wall in a condition and thickness just after its construction with the influence of any secondary calcification.
 
