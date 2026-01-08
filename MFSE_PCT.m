@@ -873,6 +873,7 @@ else
     projectname=strtrim(dummy{1});
     data.header.Projectname=projectname;
     handles.projectname.String=data.header.Projectname;
+    handles.PN_status.BackgroundColor=[0 1 0];
     data.header.Dimensions=Header.sizes;
     data.header.Voxelsize=Header.scales(1);
     handles.dimensions.String=[num2str(Header.sizes(1)) ' / ' num2str(Header.sizes(2)) ' / ' num2str(Header.sizes(3))];
@@ -1009,6 +1010,72 @@ if any(handles.Axes.DataAspectRatio~=1)
         handles.imageslider.Value=val;
     end
     imageslider_Callback(handles.imageslider,0, handles);
+end
+
+function fully_filled_WatershedImage = fill_watershed_ridge(WatershedImage,OrgImage)
+
+dims=size(WatershedImage);
+Base = [+1 +1 0 ; +1 -1 0 ; +1 0 +1 ; +1 0 -1; +1 0 0 ; 0 +1 0 ; 0 -1 0 ; 0 +1 +1 ; 0 0 +1 ; 0 -1 +1 ; 0 +1 -1 ; 0 0 -1 ; 0 -1 -1 ; -1 +1 0 ; -1 -1 0 ; -1 0 +1 ; -1 0 -1 ; -1 0 0];                
+
+weight=1./sqrt(sum(abs(Base),2));
+RidgeImage=logical(OrgImage>0)&~logical(WatershedImage);
+
+VolNums=unique(WatershedImage(WatershedImage>0));
+filled_WatershedImage=WatershedImage;
+DistanceImage=bwdist(RidgeImage);
+s=regionprops3(RidgeImage,'VoxelList','VoxelIdxList');
+
+ridgelums=vertcat(s.VoxelList{:});
+ridgelumsIDX=vertcat(s.VoxelIdxList{:});
+
+waitlist=zeros(size(ridgelums,1),1);
+pairlist=zeros(size(ridgelums,1),numel(VolNums));
+
+k=1;
+for i=1:size(ridgelums,1)        
+    neighbours = Base + repmat([ridgelums(i,2) ridgelums(i,1) ridgelums(i,3)],[18 1]);
+    vneighbours=all(neighbours>0,2)&neighbours(:,1)<=dims(1)&neighbours(:,2)<=dims(2)&neighbours(:,3)<=dims(3);      
+    curLev=DistanceImage(ridgelumsIDX(i));
+    Nindices=sub2ind(dims,neighbours(vneighbours,1),neighbours(vneighbours,2),neighbours(vneighbours,3)); % changed
+    Levels=DistanceImage(Nindices)-curLev;
+    Levels=1./(Levels.*weight(vneighbours));
+    Properties=WatershedImage(Nindices);
+    FProps=unique(Properties);
+    FProps(FProps==0)=[];
+    NLevelsVN=zeros(numel(FProps),1);
+    for n=1:numel(FProps)
+        NLevelsVN(n)=sum(Levels(Properties==FProps(n)));
+    end
+    if sum(NLevelsVN==max(NLevelsVN))>1        
+        waitlist(k)=ridgelumsIDX(i);
+        pairlist(k,1:numel(FProps(NLevelsVN==max(NLevelsVN))))=FProps(NLevelsVN==max(NLevelsVN))';
+        k=k+1;
+    else
+        filled_WatershedImage(ridgelumsIDX(i))=FProps(NLevelsVN==max(NLevelsVN));    
+    end
+        
+end
+fully_filled_WatershedImage=filled_WatershedImage;
+
+pairlist(~(waitlist>0),:)=[];
+waitlist(~(waitlist>0))=[];
+[combs,~,combgroup]=unique(pairlist,'rows');
+
+for i=1:size(combs,1)
+    Voxind=find(ismember(combgroup,i));
+    Voxtodist=numel(Voxind);
+    Vols=combs(i,combs(i,:)>0);
+    NLevelsVN=zeros(numel(Vols),1);
+    for k=1:numel(Vols)
+        NLevelsVN(k)=sum(sum(sum(ismember(WatershedImage,Vols(k)))));
+    end
+    Volratio=NLevelsVN./sum(NLevelsVN);
+    attribs=round(Voxtodist*Volratio);    
+    p=1;
+    for k=1:numel(attribs)        
+            fully_filled_WatershedImage(waitlist(Voxind(p:p+attribs(k)-1)))=Vols(k);
+            p=p+attribs(k);        
+    end
 end
 
 function Clear_Callback(~, ~, handles)

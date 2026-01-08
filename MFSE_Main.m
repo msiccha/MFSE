@@ -180,6 +180,7 @@ if load_continue
         handles.export_RAW.Enable='on';
         handles.import_AO.Enable='on';
         handles.import_AO.Checked='off';
+        handles.RecalcLabelProps.Enable='on';
         handles.MainGUIWindow.Name=['MicroFossil Segmentation Editor           '  filename];
         system.temp.revert_filename=fullfile(pathname, filename);
         system.temp.filename=filename;
