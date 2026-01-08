@@ -6,7 +6,7 @@ X-ray micro computer tomography (x-ray µCT) allows the quantification of morpho
 
 If you use this software toolbox for your research, please cite the following article:
 
-- PLACEHOLDER JORS software metapaper
+- Siccha, M. and Schmidt. D. (2026). MFSE – MicroFossil Segmentation Editor – A GUI for editing 3D segmentations of foraminifera derived from x-ray µCT, Journal of Open Research Software. (submitted)
 
 ![MFSE GUI](https://github.com/msiccha/MFSE/blob/cc6e33f570e2673c38a0601dbe2e91395b86113e/MFSE-GUI-Screenshot.png "MFSE GUI")
 
@@ -356,7 +356,7 @@ Moves the selected label(s) to a different layer. A dialog opens and asks for th
 
 <ins>WARNING</ins> Voxels in the target layer are overwritten without checking whether they already belong to another label.
 
-Copy
+#### Copy
 
 Copies the selected label(s) to a different layer. A dialog opens and asks for the name of the new label and the destination layer. Label voxels in the destination layer will be overwritten by the moved labels. To execute this operation, one or multiple labels need to be selected.
 
@@ -574,33 +574,33 @@ When all mandatory project information is correctly entered and validated, you w
 
 # References
 
-The MFSE project includes functions or source code derived from
+The MFSE project includes data, functions or source code derived from
 
-Altman, Y (2019) FindJObj V1.53
-(<https://undocumentedmatlab.com/articles/findjobj-find-underlying-java-object>)
+Altman, Y. (2019). findjobj V1.53
+(https://de.mathworks.com/matlabcentral/fileexchange/14317-findjobj-find-java-handles-of-matlab-graphic-objects), MATLAB Central File Exchange. Retrieved 3, December 2025.
 
-Kroon, D-J (2007). GIPL Toolbox V1.0
-(<https://www.mathworks.com/matlabcentral/fileexchange/16407-gipl-toolbox>), MATLAB Central File Exchange. Retrieved September 26, 2023.
+Kroon, D.-J. (2007). GIPL Toolbox V1.0
+(https://www.mathworks.com/matlabcentral/fileexchange/16407-gipl-toolbox), MATLAB Central File Exchange. Retrieved September 26, 2023.
 
-Schalk, S. (2011) Voxel Image
-(<https://www.mathworks.com/matlabcentral/fileexchange/30374-voxel-image>), MATLAB Central File Exchange. Retrieved September 26, 2023.
+Schalk, S. (2011). Voxel Image
+(https://www.mathworks.com/matlabcentral/fileexchange/30374-voxel-image), MATLAB Central File Exchange. Retrieved September 26, 2023.
 
-Legland, D. (2025) MatGeom: A toolbox for geometry processing with MATLAB.
-SoftwareX, 29, 101984, DOI:10.1016/j.softx.2024.101984b
+Legland, D. (2025). MatGeom: A toolbox for geometry processing with MATLAB.
+SoftwareX, 29, 101984. DOI:10.1016/j.softx.2024.101984
 
 Muir, D. (2025). PARFOR progress monitor (progress bar) v3
-(<https://github.com/DylanMuir/ParforProgMon>), GitHub. Retrieved 24. November 2025.
+(https://github.com/DylanMuir/ParforProgMon), GitHub. Retrieved 24. November 2025.
 
 Hoelzer, S. (2025). Progressbar
-(<https://de.mathworks.com/matlabcentral/fileexchange/6922-progressbar>), MATLAB Central File Exchange. Retrieved 24. November 2025.
+(https://de.mathworks.com/matlabcentral/fileexchange/6922-progressbar), MATLAB Central File Exchange. Retrieved 24. November 2025.
 
-Koblick, D. (2025) rotVecAroundArbAxis
-(<https://de.mathworks.com/matlabcentral/fileexchange/49916-rotvecaroundarbaxis-unitvec2rotate-rotationaxisunitvec-theta>), MATLAB Central File Exchange. Retrieved 9. Dezember 2025.
+Koblick, D. (2025). rotVecAroundArbAxis
+(https://de.mathworks.com/matlabcentral/fileexchange/49916-rotvecaroundarbaxis-unitvec2rotate-rotationaxisunitvec-theta), MATLAB Central File Exchange. Retrieved 9, December 2025. 
 
 Axis Maps / Woodruff, A. (2004), colorbrewer
-GitHub repository, <https://github.com/axismaps/colorbrewer/?tab=Apache-2.0-1-ov-file>
+(https://github.com/axismaps/colorbrewer/?tab=Apache-2.0-1-ov-file), GitHub. Retrieved 24, November 2025.
 
-Siccha, M., Morard, R., Meilland, J. et al. Collection of X-ray micro computed tomography images of shells of planktic foraminifera with curated taxonomy. Sci Data 10, 679 (2023). <https://doi.org/10.1038/s41597-023-02498-0>
+Siccha, M., Morard, R., Meilland, J. et al. (2023). Collection of X-ray micro computed tomography images of shells of planktic foraminifera with curated taxonomy. Sci Data 10, 679. DOI:10.1038/s41597-023-02498-0
 
 # Glossary
 
