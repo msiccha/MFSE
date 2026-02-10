@@ -761,7 +761,7 @@ else
     segmentation.display=system.corollary; %#ok<STRNU>
     
     save(fullfile(pathname, filename),'segmentation','-mat','-v7.3');
-    custom_msgbox(['Segmentation data file ' filename ' has been created'],'','none',[],true);
+    custom_msgbox(['Segmentation data file ' regexprep(filename,'_','\\_') ' has been created'],'','none',[],true);
 end
 
 function update_header(handles)

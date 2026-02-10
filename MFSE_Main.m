@@ -1152,7 +1152,7 @@ global data
 global system
 
 labels=str2num(handles.selected_labels.String);
-answer=inputdlg({'Enter the applied reduction factor [vx]:','remove only patches with contact to the exterior :'},'',1,{system.static.Operations.Remove_appendages.Value{1},system.static.Operations.Remove_appendages.Value{1}});
+answer=inputdlg({'Enter the applied reduction factor [vx]:','remove only patches with contact to the exterior :'},'',1,{system.static.Operations.Remove_appendages.Value{1},system.static.Operations.Remove_appendages.Value{2}});
 
 if ~isempty(answer)
     reduction_factor=str2num(answer{1});
@@ -1598,15 +1598,16 @@ if ~isempty(label)&&sum(any(data.Labeltable.Label==label))==1
                 AL_region=any(ismember(data.Labelfield,add_labels(n)),4);    
                 AL_region=AL_region&~ExternaOut&~LumenOut;
                 abe=data.Labeltable.Label==add_labels(n);
-                add_entry(handles,AL_region,TL,data.Labeltable.MorphoUnit(abe),data.Labeltable.Class(abe),data.Labeltable.Group(abe),data.Labeltable.Type(abe),[data.Labeltable.Name{abe} 'delimited']);                       
+                add_entry(handles,AL_region,TL,data.Labeltable.MorphoUnit(abe),data.Labeltable.Class(abe),data.Labeltable.Group(abe),data.Labeltable.Type(abe),[data.Labeltable.Name{abe} ' delimited']);                       
             end
         end
-        add_entry(handles,LumenOut,TL,data.Labeltable.MorphoUnit(tbe),data.Labeltable.Class(tbe),data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),[data.Labeltable.Name{tbe} 'delimited']);
-        add_entry(handles,ExternaOut,TL,data.Labeltable.MorphoUnit(tbe),'Externa',data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),name_label(data.Labeltable.Name(tbe),'externa'));
+        add_entry(handles,LumenOut,TL,data.Labeltable.MorphoUnit(tbe),data.Labeltable.Class(tbe),data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),[data.Labeltable.Name{tbe} ' delimited']);
+        add_entry(handles,ExternaOut,TL,data.Labeltable.MorphoUnit(tbe),'Externa',data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),name_label(data.Labeltable.Name(tbe),' externa'));
         guidata(hObject, handles);
         populate_table(handles,true,false);
         delete (h);
     else
+        delete(h);
         h=custom_msgbox('No gradient in ambient occlusion data found!','','error',[],true);
         return
     end
@@ -1679,8 +1680,8 @@ if ~isempty(label)&&sum(any(data.Labeltable.Label==label))==1
         LumenOut(boundaries(1,1):boundaries(1,2),boundaries(2,1):boundaries(2,2),boundaries(3,1):boundaries(3,2))=PreLumenOut;
         ExternaOut(boundaries(1,1):boundaries(1,2),boundaries(2,1):boundaries(2,2),boundaries(3,1):boundaries(3,2))=PreExternaOut;
         ExternaOut=region&ExternaOut;
-        add_entry(handles,LumenOut,DL,data.Labeltable.MorphoUnit(tbe),'Lumen',data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),name_label(data.Labeltable.Name(tbe),'special delimited'));
-        add_entry(handles,ExternaOut,DL,data.Labeltable.MorphoUnit(tbe),'Lumen',data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),name_label(data.Labeltable.Name(tbe), 'externa'));
+        add_entry(handles,LumenOut,DL,data.Labeltable.MorphoUnit(tbe),'Lumen',data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),name_label(data.Labeltable.Name(tbe),' special delimited'));
+        add_entry(handles,ExternaOut,DL,data.Labeltable.MorphoUnit(tbe),'Lumen',data.Labeltable.Group(tbe),data.Labeltable.Type(tbe),name_label(data.Labeltable.Name(tbe), ' externa'));
         populate_table(handles,true,false);
         delete (h);
     else
@@ -1834,7 +1835,7 @@ if ~isempty(label)&&sum(any(data.Labeltable.Label==label))==1
     suggested_name=regexprep(suggested_name,' +',' ');
     cname=['L' num2str(label,'%04u')];
     suggested_radius=round(data.volumedata.(cname).PrincipalAxisLength(1)*0.025);
-    answer=inputdlg({'Enter the name of the new label:','Enter the reduction element radius [vx]:','Remove lower growth stage lumina [yes/no]:','Enter the lumen layer to consider [N]:', 'Enter the target layer [N]:'},'',1,{suggested_name,num2str(suggested_radius),system.static.Operations.Delimit_convex_individual.Value{1},system.static.Operations.Delimit_convex_individual.Value{1},'3'});
+    answer=inputdlg({'Enter the name of the new label:','Enter the reduction element radius [vx]:','Remove lower growth stage lumina [yes/no]:','Enter the lumen layer to consider [N]:', 'Enter the target layer [N]:'},'',1,{suggested_name,num2str(suggested_radius),system.static.Operations.Delimit_convex_individual.Value{2},system.static.Operations.Delimit_convex_individual.Value{3},'3'});
     if ~isempty(answer)
         new_name=answer{1};
         RE=str2num(answer{2});          
@@ -2490,6 +2491,7 @@ end
 handles.MainTable.Data=handles.MainTable.Data(s,:);
 data.Labeltable=data.Labeltable(s,:);
 system.TempLabeltable=system.TempLabeltable(s,:);
+system.corollary.colormap(1:numel(s),:)=system.corollary.colormap(s,:);
 system.temp.LastSort={sort_parm, dir};
 
 function main_table_CellEditCallback(~, eventdata, handles)
@@ -3961,7 +3963,8 @@ for i=1:numel(Shelllist)
     new_name=[strrep(data.Labeltable.Name{tbe},' primary shell',''),' complete shell'];
     add_entry(handles,ismember(Secondary,Shelllist(i)),2,data.Labeltable.MorphoUnit(tbe),'Shell','complete',data.Labeltable.Type(tbe),new_name);
 end
-populate_table(handles,false,false);
+
+populate_table(handles,true,false);
 delete (h);
 
 function RecalcLabelProps_MacroCallback(~, ~, handles)
