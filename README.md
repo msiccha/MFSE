@@ -13,7 +13,7 @@ If you use this software toolbox for your research, please cite the following ar
 # General notes
 
 - The basic shell segmentation cannot be edited with MFSE.
-- A label patch consisting of only a few voxels might not be rendered in the normal or smoothed visualization. Change the visualization to voxels to make the label patch visible.
+- A label patch consisting of only a few voxels might not be rendered in the normal or smoothed visualization as all vector representations are isosurfaces derived from a variously smoothed versions of the binary label data. Change the visualization to voxels to make the label patch visible.
 - Label operations are generally irreversible.
 
 # Troubleshooting
@@ -495,7 +495,7 @@ The second hierarchical level of label description. The user is free to use any 
 The third hierarchical level of label description. The user is free to use any categorization.
 
 **Visu**(alization) - (list choice)  
-This dropdown-list allows you to change the visualization of individual labels. There are three options: normal, smoothed and voxels. Please note that the voxelized visualization requires significantly more performance from your PC, so it should be employed sparingly.
+This dropdown-list allows you to change the visualization of individual labels. There are three options: normal, smoothed and voxels. The normal visualization is the isosurface (0.5 threshold) of the underlying binary label data smoothed with gaussian kernel of the size 3 and a standard deviation of 0.65. The smoothed visualization is the isosurface (0.5 threshold) of the underlying binary label data smoothed with gaussian kernel of the size 5 and a standard deviation of 3. The voxel visualization is the accurate representation of the underlying binary label data in vector space. Please note that the voxelized visualization requires significantly more performance from your PC, so it should be employed sparingly. 
 
 **Patches \[N\]**  
 This column shows you how many patches (spatially separated subvolumes, 18-connectivity) a certain label consists of.
@@ -590,6 +590,12 @@ SoftwareX, 29, 101984. DOI:10.1016/j.softx.2024.101984
 
 Muir, D. (2025). PARFOR progress monitor (progress bar) v3
 (https://github.com/DylanMuir/ParforProgMon), GitHub. Retrieved 24. November 2025.
+
+Maurer, C., Qi, R., Raghavan, V. (2003). A Linear Time Algorithm for Computing Exact Euclidean Distance Transforms of Binary Images in Arbitrary Dimensions
+IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. 25, No. 2, pp. 265-270.
+
+Meyer, F. (1994). Topographic distance and watershed lines
+Signal Processing, Vol. 38, pp. 113-125.
 
 Hoelzer, S. (2025). Progressbar
 (https://de.mathworks.com/matlabcentral/fileexchange/6922-progressbar), MATLAB Central File Exchange. Retrieved 24. November 2025.
