@@ -18,9 +18,9 @@ If you use this software toolbox for your research, please cite the following ar
 
 # Installation
 
-- Download the installer from the RELEASES section of GitHub. The installer will deploy MFSE as an excutable on your Windows device. If the required MATLAB Runtime is not yet installed, it will install it as well. 
-- or/and (with MATLAB available) download the Zip-Archive and extract the files on your device. Add the three extracted subfolders (temporarily) to your MATLAB path. 
-- or (with MATLAB available and using GitHub) clone the repository
+- Download the installer from the RELEASES section of GitHub. The installer will deploy MFSE as an excutable on your Windows device. If the required MATLAB Runtime is not yet installed, it will install it as well. If selected a Desktop shortcut will be created. The programm will be listed as MFSE in your installed applications.
+- or/and (with MATLAB available) download the Zip-Archive and extract the files on your device. Add the three extracted subfolders (temporarily) to your MATLAB path. Run MFSE_main.
+- or (with MATLAB available and using GitHub) clone the repository. Add the three extracted subfolders (temporarily) to your MATLAB path. Run MFSE_main.
 
 # Troubleshooting
 
