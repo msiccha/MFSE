@@ -16,6 +16,11 @@ If you use this software toolbox for your research, please cite the following ar
 - A label patch consisting of only a few voxels might not be rendered in the normal or smoothed visualization as all vector representations are isosurfaces derived from a variously smoothed versions of the binary label data. Change the visualization to voxels to make the label patch visible.
 - Label operations are generally irreversible.
 
+# Installation
+
+Download the installer from the RELEASES section of GitHub. The installer will deploy MFSE as an excutable on your Windows device. If the required MATLAB Runtime is not yet installed, it will install it as well.
+
+
 # Troubleshooting
 
 - The GUI is not displayed correctly (elements missing or cut off)  
