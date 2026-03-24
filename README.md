@@ -18,7 +18,7 @@ If you use this software toolbox for your research, please cite the following ar
 
 # Installation
 
-- Download the installer from the RELEASES section of GitHub. The installer will deploy MFSE as an excutable on your Windows device. If the required MATLAB Runtime is not yet installed, it will install it as well. If selected a Desktop shortcut will be created. The programm will be listed as MFSE in your installed applications.
+- Download the installer from the RELEASES section of GitHub. The installer will deploy MFSE as an executable on your Windows device. If the required MATLAB Runtime is not yet installed, it will install it as well. If selected a Desktop shortcut will be created. The program will be listed as MFSE in your installed applications.
 - or/and (with MATLAB available) download the Zip-Archive and extract the files on your device. Add the three extracted subfolders (temporarily) to your MATLAB path. Run MFSE_main.
 - or (with MATLAB available and using GitHub) clone the repository. Add the three extracted subfolders (temporarily) to your MATLAB path. Run MFSE_main.
 
@@ -580,7 +580,7 @@ When all mandatory project information is correctly entered and validated, you w
 
 # References
 
-The MFSE project includes data, functions or source code derived from
+The MFSE project includes data, functions or source code or inspiration derived from
 
 Altman, Y. (2019). findjobj V1.53
 (https://de.mathworks.com/matlabcentral/fileexchange/14317-findjobj-find-java-handles-of-matlab-graphic-objects), MATLAB Central File Exchange. Retrieved 3, December 2025.
@@ -613,6 +613,8 @@ Axis Maps / Woodruff, A. (2004), colorbrewer
 (https://github.com/axismaps/colorbrewer/?tab=Apache-2.0-1-ov-file), GitHub. Retrieved 24, November 2025.
 
 Siccha, M., Morard, R., Meilland, J. et al. (2023). Collection of X-ray micro computed tomography images of shells of planktic foraminifera with curated taxonomy. Sci Data 10, 679. DOI:10.1038/s41597-023-02498-0
+
+Titschack, J., Baum, D., Matsuyama, K., Boos, K., Färber, C., Kahl, W.A., Ehrig, K., Meinel, D., Soriano, C. and Stock, S.R. (2018). Ambient occlusion–A powerful algorithm to segment shell and skeletal intrapores in computed tomography data. Computers & Geosciences, 115, pp.75-87. doi.org/10.1016/j.cageo.2018.03.007
 
 # Glossary
 
